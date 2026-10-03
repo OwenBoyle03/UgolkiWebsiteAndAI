@@ -1,0 +1,202 @@
+html {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    background-color: #242526;
+    color: white;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    display: inline-block;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameArea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6B6B6B;
+    padding: 1vmin;
+    border: solid #008080 0.8vmin;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    background-color: #242526;
+    padding: 1vw;
+    color: white;
+    max-width: 100%;
+    justify-content: space-between;
+}
+
+/*
+#content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+}
+
+#gameArea {
+    max-width: fit-content;
+    text-align: center;
+    margin-bottom: 1vw;
+    padding: 0;
+    display: grid;
+}
+*/
+/*
+canvas {
+    height: 90vw;
+    width: auto;
+}
+ */
+
+#tutorialTextBox, #rightContent {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1vmin;
+    max-width: 100%;
+    margin: auto;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    canvas {
+        /*height: 90vw;*/
+        height: 50vw;
+        width: auto;
+        max-width: fit-content;
+    }
+    #content {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        background-color: #242526;
+        padding: 1vw;
+        color: white;
+    }
+    #tutorialText {
+        max-width: 50vw;
+    }
+    #tutorialTextBox, #rightContent {
+        max-width: 50vw;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (min-aspect-ratio: 1/1) {
+    canvas {
+        /*height: 38vw;*/
+        height: 50vh;
+        width: auto;
+        max-width: fit-content;
+    }
+    #tutorialText {
+        max-width: 50vh;
+    }
+    #tutorialTextBox, #rightContent {
+        max-width: 50vh;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+#topBar {
+    background-color: green;
+    margin-bottom: 1vw;
+    display: block;
+    color: white;
+    height: auto;
+    width: auto;
+}
+
+#topBarItems {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.dropDownButtonLabel {
+    background-color: inherit;
+    color: white;
+    font-family: inherit;
+    outline: none;
+
+}
+
+#titleOfPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#leftButtons, #rightButtons {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Drop down stuff was adapted from W3 schools*/
+.dropDown, #topBarButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #009900;
+    position: relative;
+    float: left;
+    padding: 0.2vw;
+    border: none;
+    margin: 0.5vw;
+    cursor: pointer;
+    height: 5vh;
+    width: auto;
+}
+
+.dropDownContent {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #f9f9f9;
+    min-width: 100%;
+    min-height: 1vw;
+    z-index: 1;
+}
+
+.dropDownContent div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    float: none;
+}
+
+.dropDownContent div:hover {
+    background-color: #ddd;
+}
+
+.dropDown:hover .dropDownContent {
+    display: block;
+}
+
+.dropDown:hover, #topBarButton:hover {
+    background-color: purple;
+}
+
+#bottomOfPage {
+
+}

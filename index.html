@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ugolki AI Player</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <!-- <link rel="stylesheet" href="https://pyscript.net/releases/2024.11.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.11.1/core.js"></script> -->
+</head>
+
+<body>
+
+<div id="topBar">
+
+    <div id="topBarItems">
+
+        <div id="leftButtons">
+            <div class="dropDown" style="float: left;">
+                <h3 class="dropDownButtonLabel"> Board Size </h3>
+                <div class="dropDownContent" style="left: 0;">
+                    <div class="boardSize" id="boardSize2">
+                        <p> 2x2 </p>
+                    </div>
+
+                    <div class="boardSize" id="boardSize4">
+                        <p> 4x4 </p>
+                    </div>
+
+                    <div class="boardSize" id="boardSize6">
+                        <p> 6x6 </p>
+                    </div>
+
+                    <div class="boardSize" id="boardSize8">
+                        <p> 8x8 </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropDown" style="float: left;">
+                <h3 class="dropDownButtonLabel"> Rows with Pieces </h3>
+                <div class="dropDownContent" style="left: 0;">
+                    <div class="numOfRowsWithPieces" id="numOfRowsWithPieces1">
+                        <p> 1 Row </p>
+                    </div>
+
+                    <div class="numOfRowsWithPieces" id="numOfRowsWithPieces2">
+                        <p> 2 Rows </p>
+                    </div>
+
+                    <div class="numOfRowsWithPieces" id="numOfRowsWithPieces3">
+                        <p> 3 Rows </p>
+                    </div>
+
+                    <div class="numOfRowsWithPieces" id="numOfRowsWithPieces4">
+                        <p> 4 Rows </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropDown" style="float: left;">
+                <h3 class="dropDownButtonLabel"> Game Mode </h3>
+                <div class="dropDownContent" style="left: 0;">
+                    <div class="gameMode" id="local">
+                        <p> Local Multiplayer </p>
+                    </div>
+
+                    <div class="gameMode" id="easy">
+                        <p> Vs. Easy AI </p>
+                    </div>
+
+                    <div class="gameMode" id="medium">
+                        <p> Vs. Medium AI </p>
+                    </div>
+
+                    <div class="gameMode" id="hard">
+                        <p> Vs. Hard AI </p>
+                    </div>
+
+                    <div class="gameMode" id="MCTS">
+                        <p> Vs. MCTS </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 id="titleOfPage">Ugolki AI Player</h1>
+
+        <div id="rightButtons">
+            <div id="topBarButton" style="float: right;">
+                <h3 class="buttonLabel"> Tutorial </h3>
+            </div>
+
+            <div class="dropDown" style="float: right;">
+                <h3 class="dropDownButtonLabel"> Who Goes First </h3>
+                <div class="dropDownContent" style="right: 0;">
+                    <div class="whoGoesFirst" id="w">
+                        <p> White </p>
+                    </div>
+
+                    <div class="whoGoesFirst" id="b">
+                        <p> Black </p>
+                    </div>
+
+                    <div class="whoGoesFirst" id="r">
+                        <p> Random </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropDown" style="float: right;">
+                <h3 class="dropDownButtonLabel"> P1 Colour </h3>
+                <div class="dropDownContent" style="right: 0;">
+                    <div class="pieceColour" id="white">
+                        <p> White </p>
+                    </div>
+
+                    <div class="pieceColour" id="black">
+                        <p> Black </p>
+                    </div>
+
+                    <div class="pieceColour" id="random">
+                        <p> Random </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="main">
+    <div id="content">
+
+        <div id="tutorialTextBox">
+            <div id="tutorialText">
+
+            </div>
+        </div>
+
+        <div id="gameArea">
+
+            <canvas id="gameCanvas" width="1000" height="1000"></canvas>
+
+        </div>
+
+        <div id="rightContent"></div>
+
+    </div>
+</div>
+
+<div id="bottomOfPage">
+    <h3>How to play:</h3>
+    <p>Pieces can move in any of the four cardinal directions: up, down, left or right as long as there is an open space.</p>
+    <p>If there is a piece in front of the piece you wish to move then you can jump over it if there is an empty space after it.</p>
+    <p>To win the game you must move your pieces to the opponents corner in the same formation they started in.</p>
+</div>
+
+<!-- <script type="py" src="./scripts/ugolkiAI.py" config="./pyscript.json"></script> -->
+<script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
+<script src="scripts/GameModel.js"></script>
+<script src="scripts/ViewBoard.js"></script>
+<script src="scripts/ViewPiece.js"></script>
+<script src="scripts/GameView.js"></script>
+<script src="scripts/GameController.js"></script>
+<!-- <script src="scripts/UgolkiAIHandlerWebWorker.js"></script> -->
+
+</body>
+</html>
